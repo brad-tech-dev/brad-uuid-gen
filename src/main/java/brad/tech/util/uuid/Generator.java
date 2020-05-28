@@ -39,6 +39,7 @@ public class Generator {
         
         dialog.setAlwaysOnTop(true);
         dialog.setResizable(false);
+        dialog.setUndecorated(true);
         dialog.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         dialog.pack();
         dialog.setLocationRelativeTo(null);

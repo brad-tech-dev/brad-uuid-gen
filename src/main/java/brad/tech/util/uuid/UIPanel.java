@@ -30,7 +30,7 @@ class UIPanel extends JPanel {
         fldUUID = new javax.swing.JTextField();
         btnGenerate = new javax.swing.JButton();
         btnCopy = new javax.swing.JButton();
-        btnAbout = new javax.swing.JButton();
+        btnClose = new javax.swing.JButton();
         lblStatus = new javax.swing.JLabel();
 
         lblLogo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -58,7 +58,12 @@ class UIPanel extends JPanel {
             }
         });
 
-        btnAbout.setText("About");
+        btnClose.setText("Close");
+        btnClose.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                closeAction(evt);
+            }
+        });
 
         lblStatus.setText("OK");
         lblStatus.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -83,7 +88,7 @@ class UIPanel extends JPanel {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnCopy, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnAbout, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(btnClose, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -98,7 +103,7 @@ class UIPanel extends JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnGenerate, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnCopy, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAbout, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnClose, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(fldUUID, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -127,9 +132,13 @@ class UIPanel extends JPanel {
         }
     }//GEN-LAST:event_copyAction
 
+    private void closeAction(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_closeAction
+        System.exit(0);
+    }//GEN-LAST:event_closeAction
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAbout;
+    private javax.swing.JButton btnClose;
     private javax.swing.JButton btnCopy;
     private javax.swing.JButton btnGenerate;
     private javax.swing.JTextField fldUUID;
